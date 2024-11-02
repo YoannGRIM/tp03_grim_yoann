@@ -1,0 +1,10 @@
+<div class="form-group">
+    <input type="text" class="form-control mb-2" [(ngModel)]="searchQuery" (input)="onSearch()"
+        placeholder="Search products...">
+</div>
+<div class="form-group">
+    <input type="number" class="form-control mb-2" [(ngModel)]="minPrice" (input)="onSearch()" placeholder="Min price">
+</div>
+<div class="form-group">
+    <input type="number" class="form-control mb-2" [(ngModel)]="maxPrice" (input)="onSearch()" placeholder="Max price">
+</div>

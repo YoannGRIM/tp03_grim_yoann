@@ -1,0 +1,21 @@
+<h1 class="mb-4">Products</h1>
+<div class="d-flex justify-content-between align-items-start mb-4" style="height: auto;">
+  <div class="flex-shrink-0">
+    <app-search-product (search)="onSearch($event)"></app-search-product>
+  </div>
+  <div class="flex-grow-1 ms-3">
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let item of filteredProducts$ | async">
+        <div class="card h-100">
+          <img [src]="item.image" class="card-img-top fixed-image" [alt]="item.name">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+            <p class="card-text mt-auto"><strong>Price:</strong> ${{ item.price }}</p>
+            <a href="#" class="btn btn-primary mt-2">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
